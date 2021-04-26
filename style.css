@@ -1,0 +1,603 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.75px;
+    background: rgb(241,245,254);
+background: linear-gradient(180deg, rgba(241,245,254,1) 35%, rgba(250,251,255,1) 65%);
+}
+#headerContainer{
+    margin: 2rem auto;
+    margin-top: 4rem;
+    width: 75%;
+    text-align: center;
+    background: url(images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 20px;
+}
+
+#headerContainer h2{
+    font-size: 5vw;
+}
+
+#headerContainer p {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: -10px;
+    font-size: 3.5vw;
+    line-height: 2;
+    color: hsl(225, 20%, 60%);
+}
+
+#heroContainer{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 13px 0px #000000; 
+    box-shadow: 0px 8px 13px 0px #000000;
+}
+
+
+
+
+#sliderContainer p {
+    font-weight: bold;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    color: hsl(225, 20%, 60%);
+}
+
+#sliderContainer h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.billingOption{
+    font-weight: bold;
+    font-size: 3vw;
+    color: hsl(225, 20%, 60%);
+    
+}
+
+
+#price{
+    font-size: 8vw;
+}
+
+.discount{
+  visibility: hidden;
+}
+
+.toggleDiscount{
+  visibility: visible;
+   display: inline;
+   width: 30px;
+    font-size: 2.5vw;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 3px 5px;
+    background: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+}
+
+#monthYearOp{
+    margin-left: 5px;
+    color: hsl(225, 20%, 60%);
+}
+
+
+#slider{
+    margin: 2rem auto;
+    width: 80%;
+
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%);
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%);
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%);
+    cursor: pointer;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: hsl(174, 77%, 80%);
+    border-radius: 10px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: hsl(174, 77%, 80%);
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: hsl(174, 77%, 80%);
+    border-radius: 10px;
+    
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: hsl(174, 77%, 80%);
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border-radius: 50%;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+  
+  #discount{
+    margin-left: 4rem;
+  }
+
+
+#switcherContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2.5rem auto;
+    margin-left: 2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    outline: none;
+   
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  
+  .switcher {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  
+  
+  .switcher:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  input:checked + .switcher:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  
+  .switcher.round {
+    border-radius: 34px;
+  }
+  
+  .switcher.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+  #footerContainer{
+    border-top: 1px solid hsl(224, 65%, 95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+#footerItems {
+    margin-top: 2rem;  
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+#footerItems li {
+   margin-bottom: 1rem;
+   font-size: 3.15vw;
+   font-weight: bold;
+   color: hsl(225, 20%, 60%);
+}
+
+#footerItems li span {
+    margin-right: 1rem;
+}
+
+#footerContainer button{
+    padding: 10px 35px;
+    border-radius: 20px;
+    border: none;
+    background: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+}
+
+.check{
+    color: hsl(174, 86%, 45%);
+}
+
+.attribution { 
+    font-size: 11px;
+     text-align: center;
+     margin-top: 4rem;
+     }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+
+   /* @media only screen and (min-width: 750px) {
+      #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      #headerContainer{
+        width: 80%;
+        padding: 30px;
+        margin-bottom: 2rem;
+      }
+
+      #headerContainer h2 {
+        font-size: 2.55vw;
+        margin-top: -0.5rem;
+      }
+
+      #headerContainer br{
+        display: none;
+      }
+
+      #headerContainer p {
+        font-size: 1.25vw;
+        width: 100%;
+        line-height: 1;
+      }
+
+      #heroContainer{
+        width: 40%;
+      }
+
+      #sliderContainer{
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #slider{
+        width: 75%;
+        margin: 3rem auto;
+      }
+
+      #sliderContainer p{
+        font-size: 1vw;
+        text-align: left;
+        display: block;
+        letter-spacing: 2px;
+        margin-left: 1rem;
+        margin-top: 2rem;
+      }
+
+      #sliderContainer h4{
+       position: relative;
+       top: -8.5rem;
+       left: 5rem;
+       font-size: 1.25vw;
+       margin: 3rem auto;
+      }
+
+      #price{
+        font-size: 2.5vw;
+      }
+
+      input[type=range]::-webkit-slider-thumb{
+        width: 40px;
+        height: 40px;
+        margin-top: -1rem;
+        
+      }
+
+      .billingOption{
+        font-size: 1.25vw;
+      }
+
+      
+      #switcherContainer{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: -5rem;
+        border: 1px solid red;
+      }
+
+      .toggleDiscount{
+        width: 20px;
+         font-size: 0.75vw;
+         margin-left: 0.5rem;
+         
+     }
+
+     .switch{
+       margin-left: -5.5rem;
+       margin-right: -5.75rem;
+
+     }
+    
+     
+    .switcherContainerChecked{
+      padding-left: 3rem;
+    }
+
+    #footerContainer{
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 0;
+  }
+
+  #footerItems{
+    text-align: left;
+  }
+
+  #footerItems li {
+    font-size: 1vw;
+ }
+
+ #footerContainer button{
+   font-size: 1vw;
+  padding: 15px 50px;
+  border-radius: 30px;
+ }
+
+    
+    }*/
+
+
+    @media only screen and (min-width: 1440px) {
+
+      #headerContainer{
+        width: 80%;
+        padding: 30px;
+        margin-bottom: 4rem;
+      }
+
+      #headerContainer h2 {
+        font-size: 2.55vw;
+        margin-top: -0.5rem;
+      }
+
+      #headerContainer br{
+        display: none;
+      }
+
+      #headerContainer p {
+        font-size: 1.25vw;
+        width: 100%;
+        line-height: 1;
+        margin-top: -20px;
+      }
+
+      #heroContainer{
+        width: 40%;
+      }
+
+      #sliderContainer{
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #slider{
+        width: 75%;
+        margin: 0 auto;
+      }
+
+      #sliderContainer p{
+        font-size: 1.25vw;
+        text-align: left;
+        margin: 5rem auto;
+        display: block;
+        letter-spacing: 3px;
+        margin-left: 3rem;
+      }
+
+      #sliderContainer h4{
+       position: relative;
+       top: -12.5rem;
+       left: 10rem;
+       font-size: 1.25vw;
+       margin: 3rem auto;
+      }
+
+      #price{
+        font-size: 3vw;
+      }
+
+      input[type=range]::-webkit-slider-thumb{
+        width: 55px;
+        height: 55px;
+        margin-top: -20px;
+      }
+
+      .billingOption{
+        font-size: 1vw;
+      }
+
+      .switcher:before {
+        height: 25px;
+        width: 25px;
+        left: 4px;
+        bottom: 4.15px;
+      }
+
+      .switcher.round {
+        width: 4rem;
+        height: 2.25rem;
+        margin-top: -5px;
+      }
+
+      input:checked + .switcher:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      .switch{
+        margin-left: -16rem;
+        margin-right: -15rem;
+      }
+
+      #switcherContainer{
+        width: 100%;
+        margin-top: -5rem;
+      }
+
+      #yearly{
+        margin-left: 1rem;
+      }
+      #monthly{
+        margin-right: 0.65rem;
+      }
+
+      .toggleDiscount{
+        width: 20px;
+         font-size: 0.75vw;
+         margin-left: 0.5rem;
+         
+     }
+
+     .monthlyChecked{
+      padding-right: 1.5rem;
+     }
+
+     .yearlyChecked{
+      padding-left: 1.65rem;
+    }
+
+    #footerContainer{
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 0;
+  }
+
+  #footerItems{
+    text-align: left;
+  }
+
+  #footerItems li {
+    font-size: 1vw;
+ }
+
+ #footerContainer button{
+   font-size: 1vw;
+  padding: 15px 50px;
+  border-radius: 30px;
+ }
+
+    }
